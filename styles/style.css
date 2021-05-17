@@ -1,0 +1,60 @@
+* {
+    font-family: Helvetica, Arial, sans-serif;
+    box-sizing: border-box;
+    color: white; 
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background-color: black;
+    background-image: linear-gradient(70deg, black, black, rgb(64, 0, 92));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+nav {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 10px 0px;
+    background-color: violet;
+}
+
+nav a {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: black;
+    background-color: violet;
+}
+
+main {
+    width: 80%;
+    padding: 10px 0px;
+   
+}
+
+p {
+    margin: 20px 0px;
+}
+
+a {
+    color:violet;
+    text-decoration: none;
+}
+
+a:hover {
+    color: darkviolet;
+}
+
+footer {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 10px 0px;
+    color: black;
+    background-color: darkviolet;
+}
