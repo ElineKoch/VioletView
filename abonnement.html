@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/normalize.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/style.css">
+    <title>Abonnement - VioletView</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img class="small_logo" src="images/logo.png" alt="VioletView logo"></a>
+    </header>
+    <main>
+        <!-- Op deze pagina staat een korte beschrijving van drie mogelijke abonnementen en een formulier waarmee belangstellenden een abonnement kunnen afsluiten. Met het formulier moeten gegevens ingevuld worden zoals voornaam, achternaam, land, geboortejaar, rekeningnummer, gebruikersnaam en twee keer het wachtwoord, en moet een abonnement gekozen worden. Het invullen en versturen moeten werken. -->
+        <form action="abonnement.html" method="POST">
+           
+            <ul>
+                <li>
+                    <fieldset class="center">
+                        <legend>Kies je Abonnement!*</legend>
+                            <li>
+                        <li>
+                            <label for="opt1"><input id="opt1" type="radio" name="abonnement" value="1"><span>1 maand - €7,99</span></label>
+                        </li>
+                        <li>
+                            <label for="opt2"><input id="opt2" type="radio" name="abonnement" value="3"><span>3 maanden - €19,99</span></label>
+                        </li>
+                        <li>
+                            <label for="opt3"><input id="opt3" type="radio" name="abonnement" value="12"><span>1 jaar - €69,99</span></label>
+                        </li>
+                    </fieldset>
+                </li>
+                <li>
+                    <label for="vnaam">Voornaam*</label>
+                    <input id="vnaam" type="text" name="vnaam">
+                </li>
+                <li>
+                    <label for="vnaam">Achternaam*</label>
+                    <input id="vnaam" type="text" name="vnaam">
+                </li>
+                <li>
+                    <label for="vnaam">Geboortejaar*</label>
+                    <input id="vnaam" type="text" name="vnaam">
+                </li>
+                <li>
+                    <label for="vnaam">Land*</label>
+                    <input id="vnaam" type="text" name="vnaam">
+                </li>
+                <li>
+                    <label for="vnaam">Rekeningnummer*</label>
+                    <input id="vnaam" type="text" name="vnaam">
+                </li>
+                <li>
+                    <label for="vnaam">Gebruikersnaam*</label>
+                    <input id="vnaam" type="text" name="vnaam">
+                </li>
+                <li>
+                    <label for="vnaam">Wachtwoord*</label>
+                    <input id="vnaam" type="text" name="vnaam">
+                </li>
+                <li>
+                    <label for="vnaam">Herhaal wachtwoord*</label>
+                    <input id="vnaam" type="text" name="vnaam">
+                </li>
+                <li>
+                    <input type="submit" value="Inschrijven" class="center button">
+                </li>
+            </ul>
+          
+        </form>
+    </main>
+</body>
+
+</html>
