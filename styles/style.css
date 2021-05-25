@@ -1,5 +1,4 @@
 * {
-    font-family: Helvetica, Arial, sans-serif;
     box-sizing: border-box;
     color: white;  
 }
@@ -11,6 +10,7 @@ body {
     background-image: linear-gradient(70deg, black, black, rgb(64, 0, 92));
     background-repeat: no-repeat;
     background-attachment: fixed;
+    font-family: Helvetica, Arial, sans-serif;
 }
 
 header {
@@ -19,7 +19,7 @@ header {
 }
 
 .small_logo{
-    width: 20%;
+    width: 200px;
 }
 nav {
     border-top: 1px solid white;
@@ -31,6 +31,7 @@ nav {
 nav *{
     font-size: 1.1rem;
     color: black;
+    font-family: 'Lato', sans-serif;
     font-weight: bold;
 }
 
@@ -78,7 +79,7 @@ main {
 }
 
 .medium_image {
-    width: 25%;
+    width: 200px;
 }
 
 section {
@@ -87,13 +88,17 @@ section {
 
 section img {
     float: left;
-    margin-right: 5%;
+    margin-right: 4%;
 }
 
 .info_section a, table {
     display: block;
     margin-top: 2%;
  }
+
+h1 {
+    font-size: 1.5rem;
+}
 
 p {
     margin: 1% 0;
@@ -132,8 +137,8 @@ footer {
 
 .videogrid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2em;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
 }
 
 .videogrid img{
@@ -152,14 +157,19 @@ footer {
 }
 
 form ul{
-    width: 50%;
-    margin: 0 auto;
+    width: 100%;
+    margin: 0 20% 0 0;
     padding-right: 10%;
-    text-align: end;
+    text-align: center;
 }
 
 form li {
     margin: 4% 0;
+    display: block;
+}
+
+form label {
+    display: block;
 }
 
 form fieldset{
@@ -206,5 +216,17 @@ th {
 
     [for="menu-toggle"] {
         display: none;
+    }
+
+    form ul {
+        width: 70%;
+        text-align: end;
+    }
+
+    form label {
+        display: inline-block;
+    }
+    .videogrid {
+        grid-template-columns: repeat(5, 1fr);
     }
 }
