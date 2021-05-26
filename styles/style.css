@@ -35,7 +35,7 @@ nav *{
     font-weight: bold;
 }
 
-nav label,li {
+nav label, nav li {
     padding-left: 5%;
     padding-bottom: 10px;
 }
@@ -78,12 +78,16 @@ main {
     margin: 2% 5%;
 }
 
+.small_image {
+    width: 150px;
+}
+
 .medium_image {
     width: 200px;
 }
 
 section {
-    width: 85%;
+    width: 100%;
 }
 
 section img {
@@ -97,7 +101,11 @@ section img {
  }
 
 h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.1rem;
 }
 
 p {
@@ -121,6 +129,19 @@ a:hover {
 
 ul {
     list-style-type: none;
+}
+
+aside {
+    width: 30%;
+    float: right;
+    margin-left: 20px;
+}
+
+aside img {
+    float: right;
+    max-width: 100%;
+    min-width: 100px;
+    margin-bottom: 10%;
 }
 
 footer {
@@ -156,6 +177,10 @@ footer {
     color: darkviolet;
 }
 
+form {
+    margin-top: 40px;
+}
+
 form ul{
     width: 100%;
     margin: 0 20% 0 0;
@@ -164,7 +189,7 @@ form ul{
 }
 
 form li {
-    margin: 4% 0;
+    margin-top: 10px;
     display: block;
 }
 
@@ -182,7 +207,7 @@ form span {
 
 form .button{
     color: black;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     padding: 0.5rem;
 }
 
@@ -199,6 +224,10 @@ th {
     padding-right: 10px;
 }
 
+iframe {
+    max-width: 100%;
+    height: 100%;
+}
 
 @media screen and (min-width: 768px) {
     nav ul {
@@ -228,5 +257,14 @@ th {
     }
     .videogrid {
         grid-template-columns: repeat(5, 1fr);
+    }
+
+    section {
+        width: 80%;
+    }
+
+    iframe {
+        width: 560px; 
+        height: 315px;
     }
 }
