@@ -1,11 +1,11 @@
 * {
     box-sizing: border-box;
-    color: white;  
 }
 
 body {
     height: 100%;
     width: 100%;
+    color: white;  
     background-color: black;
     background-image: linear-gradient(70deg, black, black, rgb(64, 0, 92));
     background-repeat: no-repeat;
@@ -21,6 +21,7 @@ header {
 .small_logo{
     width: 200px;
 }
+
 nav {
     border-top: 1px solid white;
     border-bottom: 1px solid white;
@@ -35,15 +36,15 @@ nav *{
     font-weight: bold;
 }
 
-nav label, nav li {
-    padding-left: 5%;
-    padding-bottom: 10px;
-}
-
 nav ul{
-    display: none;
+    height: 0;
+    transform: translateX(-300px);
     width: 100%;
     margin: 0;
+}
+
+nav li {
+    padding-bottom: 10px;
 }
 
 nav a {
@@ -60,7 +61,12 @@ nav a {
 }
 
 #menu-toggle:checked ~ ul {
-    display: initial;
+    margin-top: 20px;
+    padding-left: 5%;
+    height: 100%;
+    display: inline-block;
+    transform: translateX(0px);
+    transition: transform 200ms ease-in;
 }
 
 [for="menu-toggle"] {
@@ -98,10 +104,10 @@ section img {
 .info_section a, table {
     display: block;
     margin-top: 2%;
- }
+}
 
 h1 {
-    font-size: 2rem;
+    font-size: 1.9rem;
 }
 
 h2 {
@@ -156,27 +162,6 @@ footer {
     font-size: 0.9rem;
 }
 
-.videogrid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-}
-
-.videogrid img{
-    max-width: 100%;
-    max-height: 100%;
-}
-
-.videogrid a {
-    display: block;
-    color: white;
-    font-weight: bold;
-}
-
-.videogrid a:hover {
-    color: darkviolet;
-}
-
 form {
     margin-top: 40px;
 }
@@ -225,14 +210,50 @@ th {
 }
 
 iframe {
-    max-width: 100%;
-    height: 100%;
+    width: 100%;
+    height: 315px;
 }
+
+.flexbox-container {
+    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.flexbox-container figure {
+    display: inline-block;
+    padding: 0;
+    margin: 10px 30px 5px 0;
+    width: 150px;
+    text-align: center;
+}
+
+.flexbox-container img {
+    display: block;
+    max-width: 100%;
+    margin: auto;
+}
+
+.flexbox-container a {
+    display: block;
+    margin-top: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.flexbox-container a:hover {
+    color: darkviolet;
+}
+
 
 @media screen and (min-width: 768px) {
     nav ul {
         display: flex;
         align-items: center;
+        transform: translateX(0);
+        height: 100%;
+        margin: 0;
     }
 
     nav ul > :nth-child(4) {
@@ -247,20 +268,17 @@ iframe {
         display: none;
     }
 
+    section {
+        width: 80%;
+    }
+
     form ul {
-        width: 70%;
+        width: 75%;
         text-align: end;
     }
 
     form label {
         display: inline-block;
-    }
-    .videogrid {
-        grid-template-columns: repeat(5, 1fr);
-    }
-
-    section {
-        width: 80%;
     }
 
     iframe {
