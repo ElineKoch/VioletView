@@ -1,3 +1,7 @@
+<?php
+require_once 'app/src/components.php';
+?>
+
 <!DOCTYPE html>
 <html lang="nl">
 
@@ -5,17 +9,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" media="screen" href="styles/normalize.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="styles/style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/screen_768px.css">
     <title>Abonnement - VioletView</title>
 </head>
 
 <body>
     <header>
-        <a href="index.html"><img class="small_logo" src="images/logo.png" alt="VioletView logo"></a>
+        <?=HTML_KLEIN_LOGO?>    
     </header>
     <main>
         <h1>Maak een account</h1>
-        <form action="abonnement.html" method="POST">
+        <form action="abonnement.php" method="POST">
             <ul>
                 <li>
                     <fieldset class="center">
@@ -69,6 +76,9 @@
             </ul>
         </form>
     </main>
+    <footer>
+        <?= HTML_FOOTER ?>
+    </footer>
 </body>
 
 </html>

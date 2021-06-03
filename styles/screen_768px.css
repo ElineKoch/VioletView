@@ -1,0 +1,40 @@
+
+@media screen and (min-width: 768px) {
+    nav ul {
+        display: flex;
+        align-items: center;
+        transform: translateX(0);
+        height: 100%;
+        margin: 0;
+    }
+    
+    nav ul> :nth-child(4) {
+        margin-left: auto;
+    }
+
+    nav li {
+        padding: 0 5% 0 1%;
+    }
+
+    [for="menu-toggle"] {
+        display: none;
+    }
+
+    article {
+        width: 80%;
+    }
+
+    form ul {
+        width: 75%;
+        text-align: end;
+    }
+
+    form label {
+        display: inline-block;
+    }
+
+    iframe {
+        width: 560px;
+        height: 315px;
+    }
+}
