@@ -20,6 +20,9 @@ require_once 'app/src/components.php';
     <header>
         <?=HTML_KLEIN_LOGO?>
     </header>
+    <nav>
+        <?= HTML_NAV ?>
+    </nav>
     <main>
         <section class="info_section">
             <iframe src="https://www.youtube.com/embed/SYRnboEUpL0?controls=0" title="YouTube video player" frameborder="0"  allowfullscreen></iframe>

@@ -1,5 +1,6 @@
 
 @media screen and (min-width: 768px) {
+    /* nav */
     nav ul {
         display: flex;
         align-items: center;
@@ -19,7 +20,8 @@
     [for="menu-toggle"] {
         display: none;
     }
-
+    
+    /* main */
     article {
         width: 80%;
     }

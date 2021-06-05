@@ -1,3 +1,6 @@
+/*==================
+    global styles
+==================*/
 * {
     box-sizing: border-box;
 }
@@ -15,6 +18,35 @@ body {
     font-family: Helvetica, Arial, sans-serif;
 }
 
+/*==================
+    typography
+==================*/
+h1 {
+    font-size: 1.9rem;
+}
+
+h2 {
+    font-size: 1.1rem;
+}
+
+p {
+    margin: 1% 0;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a:hover {
+    color: rgb(84, 0, 121);
+}
+
+/*===========
+    header
+===========*/
 header {
     width: 90%;
     margin: auto;
@@ -24,6 +56,9 @@ header {
     width: 200px;
 }
 
+/*===========
+    nav
+===========*/
 nav {
     border-top: 1px solid white;
     border-bottom: 1px solid white;
@@ -58,6 +93,7 @@ nav a {
     width: 20px;
 }
 
+/* menu toggle */
 #menu-toggle {
     display: none;
 }
@@ -68,7 +104,7 @@ nav a {
     height: 100%;
     display: inline-block;
     transform: translateX(0px);
-    transition: transform 200ms ease-in;
+    transition: transform 150ms ease-in;
 }
 
 [for="menu-toggle"] {
@@ -82,46 +118,11 @@ nav a {
     color: rgb(84, 0, 121);
 }
 
+/*=========
+    main 
+=========*/
 main {
     margin: 2% 5% 50px 5%;
-}
-
-.small_image {
-    width: 150px;
-}
-
-.medium_image {
-    width: 200px;
-}
-
-article {
-    min-height: article img ;
-    width: 100%;
-}
-
-article img {
-    float: left;
-    margin-right: 4%;
-}
-
-.info_section a, table {
-    display: block;
-    margin-top: 2%;
-}
-
-h1 {
-    font-size: 1.9rem;
-}
-
-h2 {
-    font-size: 1.1rem;
-}
-
-p {
-    margin: 1% 0;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    word-break: break-word;
 }
 
 main a {
@@ -132,14 +133,66 @@ main a {
     word-break: break-word;
 }
 
-a:hover {
-    color: rgb(84, 0, 121);
+/* main flex */
+.flexbox-container {
+    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
 }
 
-ul {
-    list-style-type: none;
+.flexbox-container section {
+    display: inline-block;
+    padding: 0;
+    margin: 10px 30px 5px 0;
+    width: 150px;
+    text-align: center;
 }
 
+.flexbox-container img {
+    display: block;
+    max-width: 100%;
+    margin: auto;
+}
+
+.flexbox-container a {
+    display: block;
+    margin-top: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.flexbox-container a:hover {
+    color: darkviolet;
+}
+
+/* section */
+.info_section {
+    width: 90%;
+}
+
+.info_section a, table {
+    display: block;
+    margin-top: 2%;
+}
+.info_section img {
+    float: left;
+    margin-right: 40px;
+    margin-bottom: 20px;
+}
+
+/* article */
+article {
+    min-height: article img ;
+    width: 100%;
+}
+
+article img {
+    float: left;
+    margin-right: 4%;
+}
+
+/* aside */
 aside {
     width: 30%;
     float: right;
@@ -153,17 +206,14 @@ aside img {
     margin-bottom: 10%;
 }
 
-footer {
-    margin-top: 100px;
-    display: block;
-    width: 100%;
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
-    padding: 1% 5%;
-    background-color: black;
-    font-size: 0.9rem;
+/*table*/
+th {
+    font-weight: bold;
+    text-align: left;
+    padding-right: 10px;
 }
 
+/* form */
 form {
     margin-top: 40px;
 }
@@ -205,45 +255,31 @@ form .center {
     text-align: center;
 }
 
-th {
-    font-weight: bold;
-    text-align: left;
-    padding-right: 10px;
+/* img */
+.small_image {
+    width: 150px;
 }
 
+.medium_image {
+    width: 200px;
+}
+
+/* iframe */
 iframe {
     width: 100%;
     height: 315px;
 }
 
-.flexbox-container {
+/*============
+    footer 
+============*/
+footer {
+    margin-top: 100px;
     display: block;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-}
-
-.flexbox-container section {
-    display: inline-block;
-    padding: 0;
-    margin: 10px 30px 5px 0;
-    width: 150px;
-    text-align: center;
-}
-
-.flexbox-container img {
-    display: block;
-    max-width: 100%;
-    margin: auto;
-}
-
-.flexbox-container a {
-    display: block;
-    margin-top: 10px;
-    color: white;
-    font-weight: bold;
-}
-
-.flexbox-container a:hover {
-    color: darkviolet;
+    width: 100%;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 1% 5%;
+    background-color: black;
+    font-size: 0.9rem;
 }

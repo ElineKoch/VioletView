@@ -20,6 +20,9 @@ require_once 'app/src/components.php';
     <header>
         <?=HTML_KLEIN_LOGO?>    
     </header>
+    <nav>
+        <?= HTML_NAV ?>
+    </nav>
     <main>
         <h1>Maak een account</h1>
         <form action="abonnement.php" method="POST">

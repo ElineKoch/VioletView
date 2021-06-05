@@ -20,12 +20,14 @@ require_once 'app/src/components.php';
     <header>
         <?=HTML_KLEIN_LOGO?>    
     </header>
+    <nav>
+        <?= HTML_NAV ?>
+    </nav>
     <main>
         <section class="info_section">
-            <a href="blind_date_2016_info.php"><img src="https://m.media-amazon.com/images/M/MV5BZjI5YjQ0OWUtM2RmYy00Njk3LWJiOTctNzFlNzM3MWE2ZTdiXkEyXkFqcGdeQXVyMjk4MTk0NDc@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="Blind Date (2016)"></a>
+            <img src="https://m.media-amazon.com/images/M/MV5BZjI5YjQ0OWUtM2RmYy00Njk3LWJiOTctNzFlNzM3MWE2ZTdiXkEyXkFqcGdeQXVyMjk4MTk0NDc@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="Blind Date (2016)">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet corrupti rem expedita tempore quidem impedit corporis enim accusantium, minima provident voluptatem commodi quae rerum, neque doloribus! Sint quam molestiae odio.</p>
             <a href="blind_date_2016_trailer.php">Bekijk de trailer ></a>
-            <!-- Van minimaal één film moet er een detailpagina uitgewerkt zijn. Op deze pagina is de poster in het groot te zien plus gegevens over de film zoals: titel, jaar, regisseur, hoofdrolspelers, duur en een samenvatting. De bestandsnaam van deze pagina is gebaseerd op de naam van de uitgewerkte film. -->
             <table>
                 <tr>
                     <th>Titel:</th>
