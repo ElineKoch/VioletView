@@ -1,5 +1,7 @@
 <?php
+
 require_once 'app/src/components.php';
+
 ?>
 
 <!DOCTYPE html>

@@ -26,7 +26,7 @@ h1 {
 }
 
 h2 {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
 }
 
 p {
@@ -38,6 +38,10 @@ p {
 
 ul {
     list-style-type: none;
+}
+
+legend {
+    font-weight: bold;
 }
 
 a:hover {

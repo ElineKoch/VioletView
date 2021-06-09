@@ -1,5 +1,7 @@
 <?php
+
 require_once 'app/src/components.php';
+
 ?>
 
 <!DOCTYPE html>
@@ -25,53 +27,53 @@ require_once 'app/src/components.php';
     </nav>
     <main>
         <h1>Maak een account</h1>
-        <form action="abonnement.php" method="POST">
+        <form action="register.php" method="POST">
             <ul>
                 <li>
                     <fieldset class="center">
                         <legend>Kies je Abonnement!*</legend>
                         <li>
-                            <label for="opt1"><input id="opt1" type="radio" name="abonnement" value="1"><span>1 maand - €7,99</span></label>
+                            <label for="abonnement1"><input id="abbonement1" type="radio" name="maandenAbonnement" value="1" required><span>1 maand - €7,99</span></label>
                         </li>
                         <li>
-                            <label for="opt2"><input id="opt2" type="radio" name="abonnement" value="3"><span>3 maanden - €19,99</span></label>
+                            <label for="abonnement2"><input id="abonnement2" type="radio" name="maandenAbonnement" value="3" required><span>3 maanden - €19,99</span></label>
                         </li>
                         <li>
-                            <label for="opt3"><input id="opt3" type="radio" name="abonnement" value="12"><span>1 jaar - €69,99</span></label>
+                            <label for="abonnement3"><input id="abonnement3" type="radio" name="maandenAbonnement" value="12" required><span>1 jaar - €69,99</span></label>
                         </li>
                     </fieldset>
                 </li>
                 <li>
-                    <label for="vnaam">Voornaam*</label>
-                    <input id="vnaam" type="text" name="vnaam">
+                    <label for="voornaam">Voornaam*</label>
+                    <input type="text" name="voornaam" id="voornaam" required>
                 </li>
                 <li>
-                    <label for="anaam">Achternaam*</label>
-                    <input id="anaam" type="text" name="anaam">
+                    <label for="achternaam">Achternaam*</label>
+                    <input type="text" name="achternaam" id="achternaam" required>
                 </li>
                 <li>
-                    <label for="gjaar">Geboortejaar*</label>
-                    <input id="gjaar" type="text" name="gjaar">
+                    <label for="geboortejaar">Geboortejaar*</label>
+                    <input type="text" name="geboortejaar" id="geboortejaar" required>
                 </li>
                 <li>
                     <label for="land">Land*</label>
-                    <input id="land" type="text" name="land">
+                    <input type="text" name="land" id="land" required>
                 </li>
                 <li>
-                    <label for="rnummer">Rekeningnummer*</label>
-                    <input id="rnummer" type="text" name="rnummer">
+                    <label for="rekeningnummer">Rekeningnummer*</label>
+                    <input type="text" name="rekeningnummer" id="rekeningnummer" required>
                 </li>
                 <li>
-                    <label for="gnaam">Gebruikersnaam*</label>
-                    <input id="gnaam" type="text" name="gnaam">
+                    <label for="gebruikersnaam">Gebruikersnaam*</label>
+                    <input type="text" name="gebruikersnaam" id="gebruikersnaam" required>
                 </li>
                 <li>
-                    <label for="ww">Wachtwoord*</label>
-                    <input id="ww" type="text" name="ww">
+                    <label for="wachtwoord">Wachtwoord*</label>
+                    <input type="password" name="wachtwoord" id="wachtwoord" required>
                 </li>
                 <li>
-                    <label for="hww">Herhaal wachtwoord*</label>
-                    <input id="hww" type="text" name="hww">
+                    <label for="herhaalWachtwoord">Herhaal wachtwoord*</label>
+                    <input type="password" name="herhaalWachtwoord" id="herhaalWachtwoord" required>
                 </li>
                 <li>
                     <input type="submit" value="Inschrijven" class="center button">

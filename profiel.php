@@ -1,5 +1,8 @@
 <?php
+
 require_once 'app/src/components.php';
+
+var_dump($_SESSION);
 ?>
 
 <!DOCTYPE html>
@@ -18,43 +21,47 @@ require_once 'app/src/components.php';
 
 <body>
     <header>
-        <?=HTML_KLEIN_LOGO?>    
+        <?= HTML_KLEIN_LOGO ?>
     </header>
     <nav>
         <?= HTML_NAV ?>
     </nav>
     <main>
         <h1>Profiel</h1>
-        <form action="profiel.php" method="POST">
-            <h2 class="center">Wijzig Gebruikersnaam</h2>
+        <h2><?= $_SESSION['gebruikersnaam'] ?></h2>
+        <table>
+            <tr> Aantal maanden abonnement: <?= $_SESSION['maandenAbonnement'] ?></tr>
+        </table>
+        <form action="wijzig_gebruikersnaam.php" method="POST">
+            <legend class="center">Wijzig Gebruikersnaam</legend>
             <ul>
                 <li>
-                    <label for="gnaam">Nieuwe Gebruikersnaam*</label>
-                    <input id="gnaam" type="text" name="gnaam">
+                    <label for="gebruikersnaam">Nieuwe Gebruikersnaam*</label>
+                    <input type="text" name="gebruikersnaam" id="gebruikersnaam" required>
                 </li>
                 <li>
-                    <label for="ww">Wachtwoord*</label>
-                    <input id="ww" type="text" name="ww">
+                    <label for="wachtwoord">Wachtwoord*</label>
+                    <input type="password" name="wachtwoord" id="wachtwoord" required>
                 </li>
                 <li>
                     <input type="submit" value="Opslaan" class="button">
                 </li>
             </ul>
         </form>
-        <form action="abonnement.php" method="POST">
-            <h2 class="center">Wijzig Wachtwoord</h2>
+        <form action="wijzig_wachtwoord.php" method="POST">
+            <legend class="center">Wijzig Wachtwoord</legend>
             <ul>
                 <li>
-                    <label for="ww">Oud Wachtwoord*</label>
-                    <input id="ww" type="text" name="ww">
+                    <label for="oudWachtwoord">Oud Wachtwoord*</label>
+                    <input type="password" name="oudWachtwoord" id="oudWachtwoord">
                 </li>
                 <li>
-                    <label for="nww">Nieuw Wachtwoord*</label>
-                    <input id="nww" type="text" name="nww">
+                    <label for="wachtwoord">Nieuw Wachtwoord*</label>
+                    <input type="password" name="wachtwoord" id="wachtwoord">
                 </li>
                 <li>
-                    <label for="hnww">Herhaal Nieuw Wachtwoord*</label>
-                    <input id="hnww" type="text" name="hnww">
+                    <label for="herhaalWachtwoord">Herhaal Nieuw Wachtwoord*</label>
+                    <input type="password" name="herhaalWachtwoord" id="herhaalWachtwoord">
                 </li>
                 <li>
                     <input type="submit" value="Opslaan" class="button">

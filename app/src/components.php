@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
 define('HTML_LOGO', maakLogo());
 define('HTML_KLEIN_LOGO', maakKleinLogo());
 define('HTML_NAV', maakNavigatiebalk());
@@ -17,15 +20,25 @@ function maakKleinLogo()
 function maakNavigatiebalk()
 {   
     $menuToggle = "<label for='menu-toggle'>Menu</label><input type='checkbox' id='menu-toggle'>";
-    $navElementen = [
-        'home' => "<a href='index.php'><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Home-icon.svg/24px-Home-icon.svg.png' alt='Home' class='small_icon'></a>",
-        'films' =>  "<a href='filmoverzicht.php'>Films</a>",
-        'overOns' => "<a href='over_ons.php'>Over ons</a>",
-        'logIn' => "<a href=''>Log In</a>",
-        'signUp' => "<a href='abonnement.php'>Sign Up</a>",
-        'profiel' => "<a href='profiel.php'>Profiel</a>"
-    ];
-
+    
+    if ($_SESSION['loggedIn']) {
+        $navElementen = [
+            'home' => "<a href='index.php'><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Home-icon.svg/24px-Home-icon.svg.png' alt='Home' class='small_icon'></a>",
+            'films' =>  "<a href='filmoverzicht.php'>Films</a>",
+            'overOns' => "<a href='over_ons.php'>Over ons</a>",
+            'logUit' => "<a href='log_uit.php'>Log Uit</a>",
+            'profiel' => "<a href='profiel.php'>{$_SESSION['gebruikersnaam']}</a>"
+        ];
+    } else {
+        $navElementen = [
+            'home' => "<a href='index.php'><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Home-icon.svg/24px-Home-icon.svg.png' alt='Home' class='small_icon'></a>",
+            'films' =>  "<a href='filmoverzicht.php'>Films</a>",
+            'overOns' => "<a href='over_ons.php'>Over ons</a>",
+            'logIn' => "<a href='inloggen.php'>Log In</a>",
+            'signUp' => "<a href='abonnement.php'>Sign Up</a>",
+        ];
+    }
+   
     $html = $menuToggle . "<ul>";
     foreach ($navElementen as $navElement) {
         $html .= "<li>$navElement</li>";
