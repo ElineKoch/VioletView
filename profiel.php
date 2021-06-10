@@ -32,6 +32,33 @@ var_dump($_SESSION);
         <table>
             <tr> Aantal maanden abonnement: <?= $_SESSION['maandenAbonnement'] ?></tr>
         </table>
+        <form action="verleng_abonnement.php" method="POST">
+            <ul>
+                <fieldset class="center">
+                    <legend>Verleng Abonnement*</legend>
+                    <li>
+                        <label for="abonnement1"><input id="abbonement1" type="radio" name="maandenAbonnement" value="1" required><span>1 maand - €7,99</span></label>
+                    </li>
+                    <li>
+                        <label for="abonnement2"><input id="abonnement2" type="radio" name="maandenAbonnement" value="3" required><span>3 maanden - €19,99</span></label>
+                    </li>
+                    <li>
+                        <label for="abonnement3"><input id="abonnement3" type="radio" name="maandenAbonnement" value="12" required><span>1 jaar - €69,99</span></label>
+                    </li>
+                </fieldset>
+                <li>
+                    <label for="rekeningnummer">Rekeningnummer*</label>
+                    <input type="text" name="rekeningnummer" id="rekeningnummer" required>
+                </li>
+                <li>
+                    <label for="wachtwoord">Wachtwoord*</label>
+                    <input type="password" name="wachtwoord" id="wachtwoord" required>
+                </li>
+                <li>
+                    <input type="submit" value="Opslaan" class="button">
+                </li>
+            </ul>
+        </form>
         <form action="wijzig_gebruikersnaam.php" method="POST">
             <legend class="center">Wijzig Gebruikersnaam</legend>
             <ul>
@@ -53,21 +80,22 @@ var_dump($_SESSION);
             <ul>
                 <li>
                     <label for="oudWachtwoord">Oud Wachtwoord*</label>
-                    <input type="password" name="oudWachtwoord" id="oudWachtwoord">
+                    <input type="password" name="oudWachtwoord" id="oudWachtwoord" required>
                 </li>
                 <li>
                     <label for="wachtwoord">Nieuw Wachtwoord*</label>
-                    <input type="password" name="wachtwoord" id="wachtwoord">
+                    <input type="password" name="wachtwoord" id="wachtwoord" required>
                 </li>
                 <li>
                     <label for="herhaalWachtwoord">Herhaal Nieuw Wachtwoord*</label>
-                    <input type="password" name="herhaalWachtwoord" id="herhaalWachtwoord">
+                    <input type="password" name="herhaalWachtwoord" id="herhaalWachtwoord" required>
                 </li>
                 <li>
                     <input type="submit" value="Opslaan" class="button">
                 </li>
             </ul>
         </form>
+
     </main>
     <footer>
         <?= HTML_FOOTER ?>

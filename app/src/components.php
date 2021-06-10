@@ -26,8 +26,8 @@ function maakNavigatiebalk()
             'home' => "<a href='index.php'><img src='https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Home-icon.svg/24px-Home-icon.svg.png' alt='Home' class='small_icon'></a>",
             'films' =>  "<a href='filmoverzicht.php'>Films</a>",
             'overOns' => "<a href='over_ons.php'>Over ons</a>",
-            'logUit' => "<a href='log_uit.php'>Log Uit</a>",
-            'profiel' => "<a href='profiel.php'>{$_SESSION['gebruikersnaam']}</a>"
+            'profiel' => "<a href='profiel.php'>{$_SESSION['gebruikersnaam']}</a>",
+            'logOut' => "<a href='log_uit.php'>Log Out</a>"
         ];
     } else {
         $navElementen = [
