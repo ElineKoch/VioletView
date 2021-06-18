@@ -1,6 +1,6 @@
 <?php
 
-require_once 'app/src/components.php';
+require_once 'view/pagina_onderdelen.php';
 
 ?>
 

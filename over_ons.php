@@ -1,6 +1,6 @@
 <?php
 
-require_once 'app/src/components.php';
+require_once('view/pagina_onderdelen.php');
 
 ?>
 
@@ -36,6 +36,15 @@ require_once 'app/src/components.php';
                 <p>
                     VioletView is opgericht door Eline Koch in 2021. Tijdens haar opleiding Software Development werkte ze aan een opdracht om een website voor een videostreaming-service te maken. Dit leidde tot het idee voor een streamingservice speciaal voor LHBT+ films en series. Vanuit daar is het team enorm uitgebreid, met collega's over de hele wereld. Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim ullam veritatis pariatur sed voluptates deleniti dolores molestias. Excepturi, sunt laboriosam, debitis non qui ipsa temporibus, impedit dolorem eveniet eaque iste.         
                 <p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia possimus amet rerum dignissimos ea fugiat accusantium quae explicabo esse. Recusandae distinctio quaerat corporis cumque reprehenderit est quas non ab eius. Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium accusamus est aperiam labore beatae magni odio doloremque totam, pariatur libero architecto incidunt tempora dignissimos rerum, aspernatur doloribus distinctio consequatur repellat?
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia possimus amet rerum dignissimos ea fugiat accusantium quae explicabo esse. Recusandae distinctio quaerat corporis cumque reprehenderit est quas non ab eius. Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium accusamus est aperiam labore beatae magni odio doloremque totam, pariatur libero architecto incidunt tempora dignissimos rerum, aspernatur doloribus distinctio consequatur repellat?
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia possimus amet rerum dignissimos ea fugiat accusantium quae explicabo esse. Recusandae distinctio quaerat corporis cumque reprehenderit est quas non ab eius. Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium accusamus est aperiam labore beatae magni odio doloremque totam, pariatur libero architecto incidunt tempora dignissimos rerum, aspernatur doloribus distinctio consequatur repellat?
+                </p>
             </article>
         </section>
     </main>

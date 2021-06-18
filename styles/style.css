@@ -1,6 +1,7 @@
 /*==================
     global styles
 ==================*/
+
 * {
     box-sizing: border-box;
 }
@@ -21,6 +22,7 @@ body {
 /*==================
     typography
 ==================*/
+
 h1 {
     font-size: 1.9rem;
 }
@@ -51,6 +53,7 @@ a:hover {
 /*===========
     header
 ===========*/
+
 header {
     width: 90%;
     margin: auto;
@@ -63,6 +66,7 @@ header {
 /*===========
     nav
 ===========*/
+
 nav {
     border-top: 1px solid white;
     border-bottom: 1px solid white;
@@ -98,6 +102,7 @@ nav a {
 }
 
 /* menu toggle */
+
 #menu-toggle {
     display: none;
 }
@@ -125,6 +130,7 @@ nav a {
 /*=========
     main 
 =========*/
+
 main {
     margin: 2% 5% 50px 5%;
 }
@@ -138,6 +144,7 @@ main a {
 }
 
 /* main flex */
+
 .flexbox-container {
     display: block;
     display: flex;
@@ -171,6 +178,7 @@ main a {
 }
 
 /* section */
+
 .info_section {
     width: 90%;
 }
@@ -179,6 +187,7 @@ main a {
     display: block;
     margin-top: 2%;
 }
+
 .info_section img {
     float: left;
     margin-right: 40px;
@@ -186,17 +195,20 @@ main a {
 }
 
 /* article */
+
 article {
-    min-height: article img ;
+    min-height: article img;
     width: 100%;
 }
 
 article img {
     float: left;
     margin-right: 4%;
+    margin-bottom: 20px;
 }
 
 /* aside */
+
 aside {
     width: 30%;
     float: right;
@@ -207,10 +219,11 @@ aside img {
     float: right;
     max-width: 100%;
     min-width: 100px;
-    margin-bottom: 10%;
+    margin-bottom: 20px;
 }
 
 /*table*/
+
 th {
     font-weight: bold;
     text-align: left;
@@ -218,6 +231,7 @@ th {
 }
 
 /* form */
+
 form {
     margin-top: 40px;
 }
@@ -259,7 +273,22 @@ form .center {
     text-align: center;
 }
 
+.search-form {
+    width: 100%;
+    text-align: end;
+    margin-top: 0;
+}
+
+.search-form input {
+    border-radius: 16px;
+}
+
+.search-form button {
+    border-radius: 8px;
+}
+
 /* img */
+
 .small_image {
     width: 150px;
 }
@@ -269,6 +298,7 @@ form .center {
 }
 
 /* iframe */
+
 iframe {
     width: 100%;
     height: 315px;
@@ -277,6 +307,7 @@ iframe {
 /*============
     footer 
 ============*/
+
 footer {
     margin-top: 100px;
     display: block;
@@ -285,5 +316,7 @@ footer {
     border-bottom: 1px solid white;
     padding: 1% 5%;
     background-color: black;
+    color: white;
     font-size: 0.9rem;
+    text-align: end;
 }

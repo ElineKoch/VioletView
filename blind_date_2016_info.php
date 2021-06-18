@@ -1,6 +1,6 @@
 <?php
 
-require_once 'app/src/components.php';
+require_once 'view/pagina_onderdelen.php';
 
 ?>
 
@@ -56,7 +56,7 @@ require_once 'app/src/components.php';
                     <td>8 min</td>
                 </tr>
             </table>
-            <a href="filmoverzicht.php">Terug naar het filmoverzicht ></a>
+            <a href="films.php">Terug naar het filmoverzicht ></a>
         </section>
     </main>
     <footer>

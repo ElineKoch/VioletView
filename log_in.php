@@ -1,6 +1,6 @@
 <?php
 
-session_start();
+require_once('view/pagina_onderdelen.php');
 
 if (htmlspecialchars(trim($_POST['gebruikersnaam'])) === $_SESSION['gebruikersnaam']) {
     $_SESSION['loggedIn'] = true;

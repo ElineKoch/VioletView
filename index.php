@@ -1,27 +1,7 @@
 <?php
 
-require_once 'app/src/components.php';
+require_once('view/pagina_onderdelen.php');
 
-print_r(PDO::getAvailableDrivers());
-
-// Naam van server
-$hostname = 'host.docker.internal';
-// Naam van database
-$dbname = 'flenix_db_rh';
-// Je eigen gebruikersnaam
-$username = 'Eline';
-// Je eigen password
-$pw = 'wachtwoord';
-
-// Connectie met de RDBMS
-// Ofwel de Database Handler (dbh).
-$dbh = new PDO("mysql:Server=3306;Database=$dbname;ConnectionPooling=0",
-  $username,
-  $pw);
-// Tijdens het ontwikkelen is het handig om meteen ook de foutmeldingen vanuit
-// de database te kunnen lezen.
-// Dat doen we met onderstaande regel:
-$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 ?>
 
 <!DOCTYPE html>
@@ -53,6 +33,12 @@ $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                     <img src="images/rainbow_quilt.jpg" alt="Progress Pride Flag Quilt" class="medium_image">
                     Vanaf €6,- per maand krijg je toegang tot onze alsmaar groeiende collectie. Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio corporis, natus vel omnis possimus, dicta nesciunt enim sequi voluptate adipisci illum accusamus excepturi quaerat non quod fugiat dolorem, odit soluta. <a href="filmoverzicht.html">Neem eerst een kijkje</a> of <a href="abonnement.html">schrijf je nu in!</a>
                 <p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, dicta molestias placeat doloribus alias nobis. Aut fugit quam libero minima, suscipit omnis eveniet doloremque deleniti laboriosam dolorem, nobis, porro ad! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, dicta molestias placeat doloribus alias nobis. Aut fugit quam libero minima, suscipit omnis eveniet doloremque deleniti laboriosam dolorem, nobis, porro ad!
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, dicta molestias placeat doloribus alias nobis. Aut fugit quam libero minima, suscipit omnis eveniet doloremque deleniti laboriosam dolorem, nobis, porro ad! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, dicta molestias placeat doloribus alias nobis. Aut fugit quam libero minima, suscipit omnis eveniet doloremque deleniti laboriosam dolorem, nobis, porro ad!
+                </p>s
             </article>
         </section>
     </main>

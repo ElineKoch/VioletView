@@ -1,6 +1,6 @@
 <?php
 
-require_once 'app/src/components.php';
+require_once 'view/pagina_onderdelen.php';
 
 ?>
 
@@ -29,7 +29,7 @@ require_once 'app/src/components.php';
         <section class="info_section">
             <iframe src="https://www.youtube.com/embed/SYRnboEUpL0?controls=0" title="YouTube video player" frameborder="0"  allowfullscreen></iframe>
             <a href="blind_date_2016_info.php">Terug naar info ></a>
-            <a href="filmoverzicht.php">Terug naar het filmoverzicht ></a>
+            <a href="films.php">Terug naar het filmoverzicht ></a>
         </section>
     </main>
     <footer>
