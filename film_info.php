@@ -1,7 +1,9 @@
 <?php
 
-require_once 'view/pagina_onderdelen.php';
+require_once('view/pagina_onderdelen.php');
+require_once('view/film_info_overzicht.php');
 
+$_SESSION['id'] = $_GET['id'];
 ?>
 
 <!DOCTYPE html>
@@ -15,22 +17,18 @@ require_once 'view/pagina_onderdelen.php';
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="styles/style.css">
     <link rel="stylesheet" type="text/css" media="screen" href="styles/screen_768px.css">
-    <title>Blind Date (2016) - Trailer - VioletView</title>
+    <title><?= $id?> - Info - VioletView</title>
 </head>
 
 <body>
     <header>
-        <?=HTML_KLEIN_LOGO?>
+        <?= HTML_KLEIN_LOGO ?>
     </header>
     <nav>
         <?= HTML_NAV ?>
     </nav>
     <main>
-        <section class="info_section">
-            <iframe src="https://www.youtube.com/embed/SYRnboEUpL0?controls=0" title="YouTube video player" frameborder="0"  allowfullscreen></iframe>
-            <a href="blind_date_2016_info.php">Terug naar info ></a>
-            <a href="films.php">Terug naar het filmoverzicht ></a>
-        </section>
+        <?= maakFilmInfoOverzicht($_SESSION['id']) ?>
     </main>
     <footer>
         <?= HTML_FOOTER ?>

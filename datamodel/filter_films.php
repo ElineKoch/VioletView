@@ -2,6 +2,7 @@
 
 require_once('query_movie.php');
 
+function filterFilms() {
 $searchKeys = ['year', 'genre', 'director', 'title'];
 $searchValues = [];
 foreach ($searchKeys as $key) {
@@ -14,4 +15,7 @@ foreach ($searchKeys as $key) {
 
 var_dump($searchValues);
 
-$films = getMovies(intval($searchValues['year']), $searchValues['genre'], $searchValues['director'], $searchValues['title'], null, 100, null, null);
+$films = getMovies($searchValues['year'], $searchValues['genre'], $searchValues['director'], $searchValues['title'], null, 50, null, null);
+
+return $films;
+}

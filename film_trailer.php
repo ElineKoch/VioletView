@@ -28,7 +28,7 @@ require_once 'view/pagina_onderdelen.php';
     <main>
         <section class="info_section">
             <iframe src="https://www.youtube.com/embed/SYRnboEUpL0?controls=0" title="YouTube video player" frameborder="0"  allowfullscreen></iframe>
-            <a href="blind_date_2016_info.php">Terug naar info ></a>
+            <a href="film_info.php?id=<?= $_SESSION['id'] ?>">Terug naar info ></a>
             <a href="films.php">Terug naar het filmoverzicht ></a>
         </section>
     </main>

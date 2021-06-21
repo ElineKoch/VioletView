@@ -15,7 +15,7 @@ require_once 'view/pagina_onderdelen.php';
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="styles/style.css">
     <link rel="stylesheet" type="text/css" media="screen" href="styles/screen_768px.css">
-    <title>Blind Date (2016) Info - VioletView</title>
+    <title>Blind Date (2016) - Info - VioletView</title>
 </head>
 
 <body>
@@ -27,7 +27,7 @@ require_once 'view/pagina_onderdelen.php';
     </nav>
     <main>
         <section class="info_section">
-            <img src="https://m.media-amazon.com/images/M/MV5BZjI5YjQ0OWUtM2RmYy00Njk3LWJiOTctNzFlNzM3MWE2ZTdiXkEyXkFqcGdeQXVyMjk4MTk0NDc@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="Blind Date (2016)">
+            <img src="images/blind_date_2016.jpg" alt="Blind Date (2016)">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet corrupti rem expedita tempore quidem impedit corporis enim accusantium, minima provident voluptatem commodi quae rerum, neque doloribus! Sint quam molestiae odio.</p>
             <a href="blind_date_2016_trailer.php">Bekijk de trailer ></a>
             <table>

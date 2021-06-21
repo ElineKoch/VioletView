@@ -23,8 +23,7 @@ function getMoviesWithDirectorId($searchWord, $year, $genre, $sortSelect = "titl
             movie.publication_year as year
             
         FROM movie WHERE movie_id IN (SELECT movie_id FROM movie_genre WHERE genre_name = :genre)";
-    if(isset($year))
-    {
+    if (isset($year)) {
         $query .= "AND movie.publication_year = $year";
     }
     $query = "WITH movies AS ({$query}) SELECT * FROM movies 
@@ -39,7 +38,7 @@ function getMoviesWithDirectorId($searchWord, $year, $genre, $sortSelect = "titl
     return executeQuery($query, $param)->fetchAll();
 }
 
-function getMovies($year, $genre, $director, $title, $id ,$amount, $random, $from): array
+function getMovies($year, $genre, $director, $title, $id, $amount, $random, $from): array
 {
     $query = "";
     $params = [];
@@ -77,11 +76,11 @@ function getMovies($year, $genre, $director, $title, $id ,$amount, $random, $fro
                 $query .= " AND ";
             };
         };
-        if($from) {
+        if ($from) {
             $params[':id'] = $id;
             $query .= "movie_id >= :id";
         };
-        if($amount) {
+        if ($amount) {
             $query .= "LIMIT $amount ";
         }
     } elseif ($id) {
@@ -127,14 +126,14 @@ function getGenreFromId($movie): array
 {
     $query = "SELECT genre_name FROM movie_genre WHERE movie_id = :id";
 
-    return executeQuery($query, [":id"=>$movie])->fetchAll();
+    return executeQuery($query, [":id" => $movie])->fetchAll();
 };
 
 function getGenreFromTitle($movie): array
 {
     $query = "SELECT genre_name FROM movie_genre WHERE movie_id IN (SELECT movie_id FROM movie WHERE title = :title)";
 
-    return executeQuery($query, [":title"=>$movie])->fetchAll();
+    return executeQuery($query, [":title" => $movie])->fetchAll();
 };
 
 function getDirectorFromId(int $movieId): array
@@ -148,10 +147,10 @@ function getDirectorFromId(int $movieId): array
     FROM movie_director, person 
     WHERE movie_director.movie_id = :movieId AND movie_director.person_id = person.person_id";
 
-    return executeQuery($query, ["movieId"=>$movieId])->fetchAll();
+    return executeQuery($query, ["movieId" => $movieId])->fetchAll();
 }
 
-function getDirectorFromTitle ($movie): array
+function getDirectorFromTitle($movie): array
 {
     $query = "SELECT person_id, firstname, lastname FROM person WHERE person_id IN 
                                              (SELECT person_id FROM movie_director WHERE movie_id IN 
@@ -163,7 +162,7 @@ function getDirectorFromTitle ($movie): array
     return executeQuery($query, $params)->fetchAll();
 };
 
-function getActorsFromTitle ($movie): array
+function getActorsFromTitle($movie): array
 {
     $query = "SELECT person_id, firstname, lastname FROM person WHERE person_id IN 
                                              (SELECT person_id FROM movie_cast WHERE movie_id IN 
@@ -172,16 +171,29 @@ function getActorsFromTitle ($movie): array
     $params = [
         ":title" => $movie
     ];
-    return executeQuery($query,$params)->fetchAll();
+    return executeQuery($query, $params)->fetchAll();
 };
 
-function getActorsFromId ($movie): array
+function getActorsFromId($movie): array
 {
     $query = "SELECT firstname, lastname FROM person WHERE person_id IN (SELECT person_id FROM movie_cast WHERE movie_id = :id)";
 
     $params = [
         ':id' => $movie
     ];
-    return executeQuery($query,$params)->fetchAll();
+    return executeQuery($query, $params)->fetchAll();
 };
 
+//zelf toegevoegd
+function getMovieFromId($movie): array
+{
+    $query = "SELECT * FROM movie WHERE movie_id = :id";
+
+    $params = [
+        ':id' => $movie
+    ];
+
+    return executeQuery($query, $params)->fetchAll();
+}
+
+ 

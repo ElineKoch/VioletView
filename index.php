@@ -31,14 +31,14 @@ require_once('view/pagina_onderdelen.php');
                 <h1>VioletView is de beste plek om LHBT+ films en series te kijken!</h1>
                 <p>
                     <img src="images/rainbow_quilt.jpg" alt="Progress Pride Flag Quilt" class="medium_image">
-                    Vanaf €6,- per maand krijg je toegang tot onze alsmaar groeiende collectie. Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio corporis, natus vel omnis possimus, dicta nesciunt enim sequi voluptate adipisci illum accusamus excepturi quaerat non quod fugiat dolorem, odit soluta. <a href="filmoverzicht.html">Neem eerst een kijkje</a> of <a href="abonnement.html">schrijf je nu in!</a>
+                    Vanaf €6,- per maand krijg je toegang tot onze alsmaar groeiende collectie. Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio corporis, natus vel omnis possimus, dicta nesciunt enim sequi voluptate adipisci illum accusamus excepturi quaerat non quod fugiat dolorem, odit soluta. <a href="films.php">Neem eerst een kijkje</a> of <a href="abonnement.php">schrijf je nu in!</a>
                 <p>
                 <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, dicta molestias placeat doloribus alias nobis. Aut fugit quam libero minima, suscipit omnis eveniet doloremque deleniti laboriosam dolorem, nobis, porro ad! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, dicta molestias placeat doloribus alias nobis. Aut fugit quam libero minima, suscipit omnis eveniet doloremque deleniti laboriosam dolorem, nobis, porro ad!
                 </p>
                 <p>
                     Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, dicta molestias placeat doloribus alias nobis. Aut fugit quam libero minima, suscipit omnis eveniet doloremque deleniti laboriosam dolorem, nobis, porro ad! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, dicta molestias placeat doloribus alias nobis. Aut fugit quam libero minima, suscipit omnis eveniet doloremque deleniti laboriosam dolorem, nobis, porro ad!
-                </p>s
+                </p>
             </article>
         </section>
     </main>

@@ -5,7 +5,7 @@
         display: flex;
         align-items: center;
         transform: translateX(0);
-        height: 100%;
+        height: 20px;
         margin: 0;
     }
     

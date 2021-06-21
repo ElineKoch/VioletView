@@ -27,7 +27,7 @@ require_once 'view/pagina_onderdelen.php';
     </nav>
     <main>
         <h1>Maak een account</h1>
-        <form action="register.php" method="POST">
+        <form action="registreer.php" method="POST">
             <ul>
                 <li>
                     <fieldset class="center">

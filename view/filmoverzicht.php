@@ -16,10 +16,9 @@ function maakFilmOverzicht($films) {
     $html = '';
     foreach($films as $film) {
         $html .= "<section>
-        <a href='film_info.php'><img src='images/placeholder.jpg' alt='{$film['title']} ({$film['publication_year']})'></a>
-        <a href='film_info.php'>{$film['title']} ({$film['publication_year']})</a>
+        <a href='film_info.php?id={$film['movie_id']}'><img src='images/placeholder.jpg' alt='{$film['title']} ({$film['publication_year']})'></a>
+        <a href='film_info.php?id={$film['movie_id']}'>{$film['title']} ({$film['publication_year']})</a>
         </section>";
     }
-
-    return $html;
+     return $html;  
 }

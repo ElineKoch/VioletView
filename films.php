@@ -54,9 +54,9 @@ require_once('view/filmoverzicht.php');
                 </li>
             </ul>
         </form>
-        <?= maakFilmOverzicht($films) ?>
+        <?= maakFilmOverzicht(filterFilms()) ?>
         <section>
-            <a href="blind_date_2016_info.php"><img src="https://m.media-amazon.com/images/M/MV5BZjI5YjQ0OWUtM2RmYy00Njk3LWJiOTctNzFlNzM3MWE2ZTdiXkEyXkFqcGdeQXVyMjk4MTk0NDc@._V1_UX182_CR0,0,182,268_AL_.jpg" alt="Blind Date (2016)"></a>
+            <a href="blind_date_2016_info.php"><img src="images/blind_date_2016.jpg" alt="Blind Date (2016)"></a>
             <a href="blind_date_2016_info.php">Blind Date (2016)</a>
         </section>
     </main>
