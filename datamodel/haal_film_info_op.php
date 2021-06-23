@@ -3,7 +3,6 @@
 require_once('query_movie.php');
 
 function haalFilmInfoOp($id) {
-
     $film = getMovieFromId($id)[0]; 
 
     $regisseur = getDirectorFromId($id);

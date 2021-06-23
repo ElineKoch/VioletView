@@ -2,8 +2,11 @@
 
 require_once('view/pagina_onderdelen.php');
 require_once('view/film_info_overzicht.php');
+require_once('datamodel/query_movie.php');
 
 $_SESSION['id'] = $_GET['id'];
+$id = $_SESSION['id'];
+
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +20,7 @@ $_SESSION['id'] = $_GET['id'];
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="styles/style.css">
     <link rel="stylesheet" type="text/css" media="screen" href="styles/screen_768px.css">
-    <title><?= $id?> - Info - VioletView</title>
+    <title><?= getMovieFromId($id)[0]['title'] ?> - Info - VioletView</title>
 </head>
 
 <body>
@@ -28,7 +31,7 @@ $_SESSION['id'] = $_GET['id'];
         <?= HTML_NAV ?>
     </nav>
     <main>
-        <?= maakFilmInfoOverzicht($_SESSION['id']) ?>
+        <?= maakFilmInfoOverzicht($id) ?>
     </main>
     <footer>
         <?= HTML_FOOTER ?>

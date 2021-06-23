@@ -196,4 +196,12 @@ function getMovieFromId($movie): array
     return executeQuery($query, $params)->fetchAll();
 }
 
- 
+function getAfbeeldingFromId($id) {
+    $query = "SELECT cover_image FROM movie WHERE movie_id = :id";
+
+    $params = [
+    ':id' => $id
+    ];
+
+    return executeQuery($query,$params)->fetchAll();
+}

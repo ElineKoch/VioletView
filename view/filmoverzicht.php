@@ -15,8 +15,14 @@ function maakGenreOpties() {
 function maakFilmOverzicht($films) {
     $html = '';
     foreach($films as $film) {
+        if(isset($film['cover_image']) && !empty($film['cover_image'])) {
+            $img = $film['cover_image'];        
+        } else {
+            $img = 'images/placeholder.jpg';
+        }
+
         $html .= "<section>
-        <a href='film_info.php?id={$film['movie_id']}'><img src='images/placeholder.jpg' alt='{$film['title']} ({$film['publication_year']})'></a>
+        <a href='film_info.php?id={$film['movie_id']}'><img src={$img} alt='{$film['title']} ({$film['publication_year']})'></a>
         <a href='film_info.php?id={$film['movie_id']}'>{$film['title']} ({$film['publication_year']})</a>
         </section>";
     }

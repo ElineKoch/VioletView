@@ -225,3 +225,4 @@ function setPassword($username, $password) {
 
     executeQuery($query,$params);
 }
+

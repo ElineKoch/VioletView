@@ -6,8 +6,13 @@ function maakFilmInfoOverzicht($id)
 {
     $filmInfo = haalFilmInfoOp($id);
 
+    $img = getAfbeeldingFromId($id)[0]['cover_image'];  
+    if(empty($img)) {
+        $img = 'images/placeholder.jpg';
+    }
+        
     $html = "<section class='info_section'>
-    <img src='https://m.media-amazon.com/images/M/MV5BZjI5YjQ0OWUtM2RmYy00Njk3LWJiOTctNzFlNzM3MWE2ZTdiXkEyXkFqcGdeQXVyMjk4MTk0NDc@._V1_UX182_CR0,0,182,268_AL_.jpg' alt='{$filmInfo['Titel']} ({$filmInfo['Jaar']})'>
+    <img src='{$img}' alt='{$filmInfo['Titel']} ({$filmInfo['Jaar']})'>
     <a href='film_trailer.php?id={$id}'>Bekijk de trailer ></a>
     <table>";
 
