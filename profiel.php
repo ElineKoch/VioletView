@@ -1,8 +1,10 @@
 <?php
 
 require_once('view/pagina_onderdelen.php');
+require_once('datamodel/query_user.php');
 
-var_dump($_SESSION);
+$username = $_SESSION['username'];
+
 ?>
 
 <!DOCTYPE html>
@@ -28,31 +30,31 @@ var_dump($_SESSION);
     </nav>
     <main>
         <h1>Profiel</h1>
-        <h2><?= $_SESSION['gebruikersnaam'] ?></h2>
+        <h2><?= $username ?></h2>
         <table>
-            <tr> Aantal maanden abonnement: <?= $_SESSION['maandenAbonnement'] ?></tr>
+            <tr> Aantal maanden abonnement: <?= getSubTime($username) ?></tr>
         </table>
         <form action="verleng_abonnement.php" method="POST">
             <ul>
                 <fieldset class="center">
                     <legend>Verleng Abonnement*</legend>
                     <li>
-                        <label for="abonnement1"><input id="abbonement1" type="radio" name="maandenAbonnement" value="1" required><span>1 maand - €7,99</span></label>
+                        <label for="subTime"><input id="subTime" type="radio" name="subTime" value="1" required><span>1 maand - €7,99</span></label>
                     </li>
                     <li>
-                        <label for="abonnement2"><input id="abonnement2" type="radio" name="maandenAbonnement" value="3" required><span>3 maanden - €19,99</span></label>
+                        <label for="subTime"><input id="subTime" type="radio" name="subTime" value="3" required><span>3 maanden - €19,99</span></label>
                     </li>
                     <li>
-                        <label for="abonnement3"><input id="abonnement3" type="radio" name="maandenAbonnement" value="12" required><span>1 jaar - €69,99</span></label>
+                        <label for="subTime"><input id="subTime" type="radio" name="subTime" value="12" required><span>1 jaar - €69,99</span></label>
                     </li>
                 </fieldset>
                 <li>
-                    <label for="rekeningnummer">Rekeningnummer*</label>
-                    <input type="text" name="rekeningnummer" id="rekeningnummer" required>
+                    <label for="accountNum">Rekeningnummer*</label>
+                    <input type="text" name="accountNum" id="accountNum" required>
                 </li>
                 <li>
-                    <label for="wachtwoord">Wachtwoord*</label>
-                    <input type="password" name="wachtwoord" id="wachtwoord" required>
+                    <label for="password">Wachtwoord*</label>
+                    <input type="password" name="password" id="password" required>
                 </li>
                 <li>
                     <input type="submit" value="Opslaan" class="button">
@@ -63,12 +65,12 @@ var_dump($_SESSION);
             <legend class="center">Wijzig Gebruikersnaam</legend>
             <ul>
                 <li>
-                    <label for="gebruikersnaam">Nieuwe Gebruikersnaam*</label>
-                    <input type="text" name="gebruikersnaam" id="gebruikersnaam" required>
+                    <label for="username">Nieuwe Gebruikersnaam*</label>
+                    <input type="text" name="username" id="username" required>
                 </li>
                 <li>
-                    <label for="wachtwoord">Wachtwoord*</label>
-                    <input type="password" name="wachtwoord" id="wachtwoord" required>
+                    <label for="password">Wachtwoord*</label>
+                    <input type="password" name="password" id="password" required>
                 </li>
                 <li>
                     <input type="submit" value="Opslaan" class="button">
@@ -79,16 +81,16 @@ var_dump($_SESSION);
             <legend class="center">Wijzig Wachtwoord</legend>
             <ul>
                 <li>
-                    <label for="oudWachtwoord">Oud Wachtwoord*</label>
-                    <input type="password" name="oudWachtwoord" id="oudWachtwoord" required>
+                    <label for="oldPassword">Oud Wachtwoord*</label>
+                    <input type="password" name="oldPassword" id="oldPassword" required>
                 </li>
                 <li>
-                    <label for="wachtwoord">Nieuw Wachtwoord*</label>
-                    <input type="password" name="wachtwoord" id="wachtwoord" required>
+                    <label for="password">Nieuw Wachtwoord*</label>
+                    <input type="password" name="password" id="password" required>
                 </li>
                 <li>
-                    <label for="herhaalWachtwoord">Herhaal Nieuw Wachtwoord*</label>
-                    <input type="password" name="herhaalWachtwoord" id="herhaalWachtwoord" required>
+                    <label for="repeatPassword">Herhaal Nieuw Wachtwoord*</label>
+                    <input type="password" name="repeatPassword" id="repeatPassword" required>
                 </li>
                 <li>
                     <input type="submit" value="Opslaan" class="button">

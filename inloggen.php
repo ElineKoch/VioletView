@@ -30,12 +30,12 @@ require_once('view/pagina_onderdelen.php');
         <form action="log_in.php" method="POST">
             <ul>
                 <li>
-                    <label for="gebruikersnaam">Gebruikersnaam*</label>
-                    <input type="text" name="gebruikersnaam" id="gebruikersnaam" >
+                    <label for="username">Gebruikersnaam*</label>
+                    <input type="text" name="username" id="username" required>
                 </li>
                 <li>
-                    <label for="wachtwoord">Wachtwoord*</label>
-                    <input type="text" name="wachtwoord" id="wachtwoord">
+                    <label for="password">Wachtwoord*</label>
+                    <input type="text" name="password" id="password" required>
                 </li>
                 <li>
                     <input type="submit" value="Log In" class="button">

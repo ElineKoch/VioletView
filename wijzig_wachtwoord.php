@@ -1,15 +1,14 @@
 <?php
 
 require_once('view/pagina_onderdelen.php');
+require_once('datamodel/query_user.php');
 
-if (
-    $_POST['wachtwoord'] != $_POST['herhaalWachtwoord'] || 
-    $_POST['oudWachtwoord'] != $_SESSION['wachtwoord']
-) {
-    header('Location: profiel.php');
-} else {
-    foreach($_POST as $key => $value) {
-        $_SESSION[$key] = $value;
-    }
-    header('Location: profiel.php');
-}
+$username = $_SESSION['username'];
+$oldPassword = htmlspecialchars(trim($_POST['oldPassword']));
+
+if (controleerLogin($username, $oldPassword) && $_POST['password'] === $_POST['repeatPassword']) {
+    $password = htmlspecialchars(trim($_POST['password']));
+    setPassword($username, $password);
+} 
+
+header('Location: profiel.php');

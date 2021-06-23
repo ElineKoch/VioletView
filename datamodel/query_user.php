@@ -33,7 +33,7 @@ function getCountries (): array
     return executeQuery($query)->fetchAll();
 };
 
-function getSubscritions(): array
+function getSubscriptions(): array
 {
     $query = "SELECT * FROM contract";
     $results = executeQuery($query)->fetchAll();
@@ -135,3 +135,93 @@ function checklogin ($mail, $pw): array
     }
     return $result;
 };
+
+//zelf toegevoegd
+function maakAccount($accountData): array
+{
+    $password = password_hash($accountData['password'], PASSWORD_DEFAULT);
+
+    $params = [
+        ':mail' => $accountData['email'],
+        ':lastname' => $accountData['lastname'],
+        ':firstname' => $accountData['firstname'],
+        ':username' => $accountData['username'],
+        ':password' => $password,
+        ':subTime' => $accountData['subTime'],
+        ':birthYear' => $accountData['birthYear'],
+        ':country' => $accountData['country'],
+        ':accountNum' => $accountData['accountNum']
+    ];
+
+    $query = "INSERT INTO fletnix_user (mail, lastname, firstname, username, password, subTime, birthYear, country, accountNum) VALUES (:mail, :lastname, :firstname, :username, :password, :subTime, :birthYear, :country, :accountNum)";
+
+    return executeQuery($query,$params)->fetchAll();
+};
+
+function controleerlogin($username, $pw): array
+{
+    $query = "SELECT * FROM fletnix_user WHERE username = :username";
+
+    $param = [
+        "username" => $username
+    ];
+
+    $result = executeQuery($query, $param)->fetchAll(PDO::FETCH_ASSOC);
+    if ($result) {
+        $hash = $result[0]['password'];
+        if (!password_verify($pw, $hash)) {
+        $result = [];
+        }
+        else
+        {
+            $result[0]['password'] = "";
+        }
+    }
+
+    return $result;
+};
+
+function getSubTime($username) {
+    $query = "SELECT subTime FROM fletnix_user WHERE username = :username";
+
+    $params = [
+    ':username' => $username
+    ];
+
+    return executeQuery($query,$params)->fetchAll()[0]['subTime'];
+}
+
+function setSubTime($username, $subTime) {
+    $query = "UPDATE fletnix_user SET subTime = :subTime WHERE username = :username";
+
+    $params = [
+    ':username' => $username,
+    ':subTime' => $subTime
+    ];
+
+    executeQuery($query,$params);
+}
+
+function setUsername($username, $newUsername) {
+    $query = "UPDATE fletnix_user SET username = :newUsername WHERE username = :username";
+
+    $params = [
+    ':username' => $username,
+    ':newUsername' => $newUsername
+    ];
+
+    executeQuery($query,$params);
+}
+
+function setPassword($username, $password) {
+    $password = password_hash($password, PASSWORD_DEFAULT);
+
+    $query = "UPDATE fletnix_user SET password = :password WHERE username = :username";
+
+    $params = [
+    ':username' => $username,
+    ':password' => $password
+    ];
+
+    executeQuery($query,$params);
+}

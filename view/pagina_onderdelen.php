@@ -31,7 +31,7 @@ function maakNavigatiebalk()
 
     if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn']) {
         $navElementen = array_merge($navElementen, [
-            'profiel' => "<a href='profiel.php'>{$_SESSION['gebruikersnaam']}</a>",
+            'profiel' => "<a href='profiel.php'>{$_SESSION['username']}</a>",
             'logOut' => "<a href='log_uit.php'>Log Out</a>"
         ]);
     } else {
