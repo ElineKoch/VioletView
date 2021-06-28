@@ -1,0 +1,4 @@
+host = localhost
+db = fletnix_db_rh
+user = Eline
+pass = testwachtwoord
