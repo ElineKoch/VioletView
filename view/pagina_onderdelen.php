@@ -2,7 +2,7 @@
 
 session_start();
 
-require_once('datamodel/db_connectie.php');
+// require_once('datamodel/db_connectie.php');
 
 define('HTML_LOGO', maakLogo());
 define('HTML_KLEIN_LOGO', maakKleinLogo());

@@ -1,4 +1,7 @@
 <?php
+
+require_once('datamodel/db_connectie.php');
+
 function executeQuery($query, $array = []): bool|PDOStatement
 {
     global $dbh;
